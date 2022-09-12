@@ -42,25 +42,29 @@ class UserItem extends Component {
     const { user, loading } = this.state;
 
     return (
-      <div>
+      <div className='playeritem'>
         <h2>User ({this.props.match.params.id})</h2>
         {loading && <div>Loading ...</div>}
-
+                
         {user && (
-          <div className='playeritem'>
-          <span>
+          <div > 
+       
+          <div>
               <strong>ID:</strong> {user.uid}
-            </span>
-            <span>
+            </div>
+            <div>
               <strong>E-Mail:</strong> {user.email}
-            </span>
-            <span>
-              <strong>Username:</strong> {user.nome}
-            </span>
-            <span>
-            <span>
+            </div>
+            <div>
+              <strong>Username:</strong> {user.username}
+            </div>
+            <div>
+            <div>
                 <strong>Mothername:</strong> {user.nomemae}
-              </span>
+            </div>
+            <div>
+                <strong>img:</strong> {user.img}
+            </div>
               
 
               <button
@@ -69,7 +73,7 @@ class UserItem extends Component {
               >
                 Send Password Reset
               </button>
-            </span>
+            </div>
           </div>
         )}
       </div>

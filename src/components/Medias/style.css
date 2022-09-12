@@ -1,0 +1,52 @@
+.divgeral{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 0;
+    top: 0px;
+    flex-direction: column;
+    background-color: rgb(250, 250, 250);
+}
+.cardmediatop{
+    width: 100%;
+    height: 10vh;
+    background-color: rgba(224, 64, 64, 0.24);
+}
+.cardmediabanner{
+    width: 100%;
+    height: 30vh;
+    background-color: rgba(233, 231, 231, 0.822);
+}
+.cardmediavideo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+
+    background-color: rgba(27, 27, 27, 0);
+}
+.cardmedia{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(168, 49, 49, 0.24);
+}
+.miniaturas{
+    display: flex;
+    margin-top: 15px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 18vh;
+    background-color: aquamarine;
+}
+
+.video{
+    width: 600px;
+}
+.videoicon{
+    width: 180px;
+    margin: 8px;
+}

@@ -1,5 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { compose } from 'recompose';
+import iconcalendar from '../../assets/calendar.svg';
+import iconestatura from '../../assets/metrr.svg';
+import iconposition from '../../assets/position.svg';
+import iconlanguange from '../../assets/language.svg';
+import iconstudy from '../../assets/book.svg';
+import iconmenu from  '../../assets/menu.svg';
+import Menuside from '../Menu';
+
 import './style.css'
 
 import {
@@ -8,6 +16,10 @@ import {
   withEmailVerification,
 } from '../Session';
 import { withFirebase } from '../Firebase';
+
+
+
+
 
 const SIGN_IN_METHODS = [
   {
@@ -28,68 +40,131 @@ const SIGN_IN_METHODS = [
   },
 ];
 
+function Controler(){
+  const [active, setMode] = useState(false);
+  const ToggleMode = () => {
+      setMode(!active)
+  }
+};
+
 
 
 const AccountPage = () => (
   <AuthUserContext.Consumer>
     {authUser => (
       <div className='acountpage'>
-        <div className='card'>
-          <img className='boximg' src={authUser.img} alt="">
-          </img>
-          <div className='boxdata'>
-              <div className='linedata'>
-                 <div className='texttitlle'> {authUser.username}</div>
-              </div>
-              <div className='linedata'>
-                 <div className='text'> {authUser.email}</div> 
-              </div>
-              <br/>
-              <div className='linedata'>
-                 <div className='text'> <strong>Nascimento:</strong> {authUser.ano}</div>
-              </div>
-              <div className='linedata'>
-                 <div className='text'><strong>Position: </strong>{authUser.posicao}</div>
-              </div>
-              <div className='linedata'>
-                 <div className='text'><strong>Estatura:</strong> {authUser.estatura}</div>
-              </div>
-              
-              <div className='barradata'>
-              <div className='boxdataint'>
-              <div className='text'>Escolar</div>
-              <div className='textin'>
-                 {authUser.vlwescolar}
-                 </div>
-                
-              </div>
-              <div className='boxdataint'>
-              <div className='text'>Inglês</div>
-              <div className='textin'>
-                 {authUser.vlwidioma}
-                 </div>
-                
-              </div>
-              <div className='boxdataint'>
-
-                
-              </div>
-              </div>
-
-          </div>
-        </div>
-        <div className='cardb'>
-          <div className='box'></div>
-          <div className='box'></div>
-          <div className='box'></div>
-          <div className='box'></div>
-       
-        </div>
-        <div className='barrainput'>
-    
-        </div>
      
-       
+        <div className='barratop'>
+               
+        </div>
+        <div className='barratopmob'>
+        
+        </div>
+         <div className='card'>
+            <div className='cardl'>
+              <div className='cardlsup'>
+              <img className='boximg' src={authUser.img} alt=""></img>
+              </div>
+              <div className='cardlsub'>
+              <div className='texttitlle'> {authUser.username}</div>
+              <div className='textemail'> {authUser.email}</div> 
+              <div className='contdado'>
+                <div className='iconcont'>
+                   <div className='iconcontdado'>
+                   <img src={iconcalendar} alt=""/>
+                </div>
+                </div>
+               
+                <div className='dadocontdado'>
+                <div className='text'> <strong> Nascimento:</strong> {authUser.ano}</div> 
+                </div>
+              </div>
+              <div className='contdado'>
+                <div className='iconcontb'>
+                   <div className='iconcontdado'>
+                   <img src={iconestatura} alt=""/>
+                </div>
+                </div>
+                <div className='dadocontdado'>
+                <div className='text'> <strong>Estatura:</strong> {authUser.estatura}</div> 
+                </div>
+              </div>
+              <div className='contdado'>
+                <div className='iconcontc'>
+                   <div className='iconcontdado'>
+                   <img src={iconposition} alt=""/>
+                </div>
+                </div>
+                <div className='dadocontdado'>
+                <div className='text'> <strong>Posição:</strong> {authUser.posicao}</div> 
+                </div>
+              </div>
+              <div className='contdadomob'>
+                <div className='iconcontd'>
+                   <div className='iconcontdado'>
+                   <img src={iconstudy} alt=""/>
+                </div>
+                </div>
+                <div className='dadocontdado'>
+                <div className='text'> <strong>Estudos:</strong> {authUser.estudos}</div> 
+                </div>
+              </div>
+              <div className='contdadomob'>
+                <div className='iconconte'>
+                   <div className='iconcontdado'>
+                   <img src={iconlanguange} alt=""/>
+                </div>
+                </div>
+                <div className='dadocontdado'>
+                <div className='text'> <strong>Ingles:</strong> {authUser.idioma}</div> 
+                </div>
+              </div>
+              </div>
+            </div>
+            <div className='cardr'>
+            <div className='cardrsup'>
+              <div className='cardintosup'>
+                     <div className='textingl'>
+                              O idioma idioma é muito importante para que você tenha uma boa experiencia no exterior.
+                              atualmente seu nivel de inglês é:
+                     </div>
+                     <div className='intinfo'>
+                     <div className='divlvwidioma'>
+                     <strong>{authUser.idioma}</strong>
+                     </div>
+                     <div className='infolvwcut'>
+                         <h5>Para marcar aulas e obter mais informações clique no botão abaixo.
+                     </h5> </div>
+                     </div>
+              </div>
+              <div className='cardintosub'>
+                      <h2>Idioma</h2>
+              </div>
+            </div>
+              <div className='cardrsup'>
+              <div className='cardintosup'>
+              <div className='textingl'>
+                             Lembrete - o bom desempenho escolar e obrigatório para a continuidade no programa.
+                     </div>
+                     <div className='intinfo'>
+                       <div className='divlvwidioma'>
+                     <strong>{authUser.estudos}</strong> 
+                     </div>
+                     <div className='infolvwcut'>
+                     <h5>Para saber mais sobre desempenho escolar clique no botão abaixo
+                     </h5>
+                     </div>
+                     </div>
+                  </div>
+                  <div className='cardintosub'>
+                      <h2>Estudos</h2>
+                  </div>
+              </div>
+            </div>
+         </div>
+         <div className='barrafoot'>
+
+         </div>
       </div>
     )}
   </AuthUserContext.Consumer>

@@ -5,6 +5,7 @@ import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
 import * as ROLES from '../../constants/roles';
 import './style.css';
+import logo from '../../assets/logoplus.png';
 
 const Navigation = () => (
   <AuthUserContext.Consumer>
@@ -18,38 +19,101 @@ const Navigation = () => (
   </AuthUserContext.Consumer>
 );
 
-const NavigationAuth = ({ authUser }) => (
-    <div className='manusup'>
-      <button>
-      <Link to={ROUTES.LANDING}>Landing</Link>
-      </button>
-      <button>
-        <Link to={ROUTES.HOME}>Home</Link>
-      </button>
-      <button>
-        <Link to={ROUTES.ACCOUNT}>Account</Link>
-      </button>
+function contruction()
+{
+alert("Disponivel em breve!");
+}
 
-    {!!authUser.roles[ROLES.ADMIN] && (
-      <button>
-        <Link to={ROUTES.ADMIN}>Admin</Link>
-      </button>
-    )}
-  
-      <SignOutButton />
+const NavigationAuth = ({ authUser }) => (
  
-   </div>
+  <div class="area">
+  <nav class="main-menu">
+    <div className='menuinterno'>
+      <div className='menuamburguer'>
+                      <i class="fa fa-bars fa-2x"></i>
+                      <span class="nav-text">
+                      </span>
+      </div>
+          <ul>
+             
+              <li>
+              <Link to={ROUTES.LANDING}>
+                      <i class="fa fa-home fa-2x"></i>
+                      <span class="nav-text">
+                          Novidades
+                      </span>
+                </Link>
+                
+              </li>
+            
+              <li class="has-subnav">
+              <Link to={ROUTES.ACCOUNT}>
+                      <i class="fa fa-user fa-2x"></i>
+                      <span class="nav-text">
+                          Meu perfil
+                      </span>
+                 </Link>
+              </li>
+              <li  class="has-subnav">
+                <Link to={ROUTES.MEDIA}>
+                   <i class="fa fa-play fa-2x"></i>
+                      <span class="nav-text">
+                         Meus vídeos
+                      </span>
+                  </Link>
+              </li>
+              <li  class="has-subnav">
+                <Link to={ROUTES.SERVICE}>
+                   <i class="fa fa-book fa-2x"></i>
+                      <span class="nav-text">
+                         Serviços
+                      </span>
+                  </Link>
+              </li>
+            
+              {!!authUser.roles[ROLES.ADMIN] && (
+              <li class="has-subnav">
+              <Link to={ROUTES.ADMIN}>
+                     <i class="fa fa-list fa-2x"></i>
+                      <span class="nav-text">
+                          Admin
+                      </span>
+                  </Link>
+              </li>
+                )}
+             
+              
+          </ul>
+          </div>
+
+          <ul class="logout">
+              <li>
+               
+                       
+                      <span class="nav-text">
+                      <SignOutButton />
+                      </span>
+               
+              </li>  
+          </ul>
+        </nav>
+      </div>
+
 );
 
 const NavigationNonAuth = () => (
     
-  <div>
-    <button>
-      <Link to={ROUTES.LANDING}>Landing</Link>
+  <div className='extern'>
+    <div className='extera'>
+       <img src={logo} alt=""/>
+    </div>
+    <div className='exterab'></div>
+    <div className='exterac'>
+    <button className='btnmenu'>
+        <Link to={ROUTES.SIGN_IN}>Entrar</Link>
     </button>
-    <button>
-        <Link to={ROUTES.SIGN_IN}>Sign In</Link>
-    </button>
+    </div>
+   
   </div>
 );
 

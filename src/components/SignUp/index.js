@@ -6,9 +6,10 @@ import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 import * as ROLES from '../../constants/roles';
 
+
 const SignUpPage = () => (
   <div>
-    <h1>SignUp</h1>
+   
     <SignUpForm />
   </div>
 );
@@ -40,7 +41,7 @@ class SignUpFormBase extends Component {
   }
 
   onSubmit = event => {
-    const { username, email, passwordOne, isAdmin } = this.state;
+    const { username,ano, estatura, nomemae,nomepai,posicao,telefone,img, email, passwordOne, isAdmin,estudos, idioma } = this.state;
     const roles = {};
 
     if (isAdmin) {
@@ -53,7 +54,16 @@ class SignUpFormBase extends Component {
         // Create a user in your Firebase realtime database
         return this.props.firebase.user(authUser.user.uid).set({
           username,
+          ano,
           email,
+          estatura,
+          nomemae,
+          nomepai,
+          posicao,
+          telefone,
+          img,
+          estudos,
+          idioma,
           roles,
         });
       })
@@ -87,6 +97,15 @@ class SignUpFormBase extends Component {
     const {
       username,
       email,
+      estatura,
+      ano,
+      nomemae,
+      nomepai,
+      posicao,
+      telefone,
+      img,
+      estudos,
+      idioma,
       passwordOne,
       passwordTwo,
       isAdmin,
@@ -96,34 +115,107 @@ class SignUpFormBase extends Component {
     const isInvalid =
       passwordOne !== passwordTwo ||
       passwordOne === '' ||
+      estatura === '' ||
+      ano === '' ||
+      nomemae === '' ||
+      nomepai === '' ||
+      posicao === '' ||
+      telefone === '' ||
+      img === '' ||
+      estudos === '' ||
+      idioma === '' ||
       email === '' ||
       username === '';
 
     return (
-      <div className='divteste'>
+      <div className='divinputs'>
+        <div className='carinpults'>
                  <form onSubmit={this.onSubmit}>
-        <input
+        <input className='inputstyle'
           name="username"
           value={username}
           onChange={this.onChange}
           type="text"
           placeholder="Full Name"
         />
-        <input
+        <input className='inputstyle'
           name="email"
           value={email}
           onChange={this.onChange}
-          type="text"
+          type="email"
           placeholder="Email Address"
         />
-        <input
+         <input className='inputstyle'
+          name="estatura"
+          value={estatura}
+          onChange={this.onChange}
+          type="number"
+          placeholder="Estatura"
+        />
+        <input className='inputstyle'
+          name="ano"
+          value={ano}
+          onChange={this.onChange}
+          type="date"
+          placeholder="Nascimento"
+        />
+        <input className='inputstyle'
+          name="nomemae"
+          value={nomemae}
+          onChange={this.onChange}
+          type="text"
+          placeholder="Nome da mae"
+        />
+        <input className='inputstyle'
+          name="nomepai"
+          value={nomepai}
+          onChange={this.onChange}
+          type="text"
+          placeholder="Nome do pai"
+        />
+        <input className='inputstyle'
+          name="posicao"
+          value={posicao}
+          onChange={this.onChange}
+          type="text"
+          placeholder="Posicao"
+        />
+        <input className='inputstyle'
+          name="telefone"
+          value={telefone}
+          onChange={this.onChange}
+          type="phone"
+          placeholder="Telefone"
+        />
+        <input className='inputstyle'
+          name="img"
+          value={img}
+          onChange={this.onChange}
+          type="text"
+          placeholder="Vazio"
+        />
+        <input className='inputstyle'
+          name="estudos"
+          value={estudos}
+          onChange={this.onChange}
+          type="text"
+          placeholder="Estudos"
+        />
+        <input className='inputstyle'
+          name="idioma"
+          value={idioma}
+          onChange={this.onChange}
+          type="text"
+          placeholder="Idioma"
+        />
+        <input className='inputstyle'
           name="passwordOne"
           value={passwordOne}
           onChange={this.onChange}
           type="password"
           placeholder="Password"
         />
-        <input
+        <input className='inputstyle'
           name="passwordTwo"
           value={passwordTwo}
           onChange={this.onChange}
@@ -132,7 +224,7 @@ class SignUpFormBase extends Component {
         />
         <label>
           Admin:
-          <input
+          <input className='inputstyle'
             name="isAdmin"
             type="checkbox"
             checked={isAdmin}
@@ -146,6 +238,7 @@ class SignUpFormBase extends Component {
         {error && <p>{error.message}</p>}
       </form>
       </div>
+      </div>
      
     );
   }
@@ -153,7 +246,7 @@ class SignUpFormBase extends Component {
 
 const SignUpLink = () => (
   <p>
-    Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
+    <Link to={ROUTES.SIGN_UP}> Cadastrar um novo atleta</Link>
   </p>
 );
 
