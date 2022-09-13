@@ -1,10 +1,8 @@
-.main{
+.mainlanding{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    padding-top: 30px;
+    height: 100vh;
     background-image: url(https://ubunlog.com/wp-content/uploads/2014/03/wallpapers-oficiales-ubuntu-14.04-01.jpg);
     background-position: center;
     background-size: cover;

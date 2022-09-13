@@ -2,10 +2,8 @@ import React from "react";
 import './style.css';
 
 const Foot = () =>(
-  <div>
-    <footer>
-        teste
-    </footer>
+  <div className="barrafoot">
+
   </div>
 );
 

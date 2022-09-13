@@ -1,28 +1,44 @@
-import React, { Component } from 'react';
+import React, { Component,TextInput } from 'react';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget';
 import { withFirebase } from '../Firebase';
+import logo from '../../assets/logoplus.png'
 import * as ROUTES from '../../constants/routes';
 import './style.css';
 
 const SignInPage = () => (
+
+  <div className='divloggeral'>
+
+  <div className='cardsinone'>
+     
+  </div>
+
   <div className='cardsign'>
-    <h1>Login</h1>
-    <div className='carditemlog'>
-        <SignInForm />
+    <div className='divlogsup'>
+    <div className='divloglogo'>
+       <img className='divlogimg' src={logo} alt=""/>
     </div>
+    </div>
+    <div className='divlogsub'>
+    
+        <SignInForm />
    
-  
-  
+    </div>
                
     {/*
     <PasswordForgetLink />
     <SignUpLink />*/}
    
   </div>
+
+  </div>
+
 );
+
+const isBackgroundRed = true;
 
 const INITIAL_STATE = {
   email: '',
@@ -67,31 +83,67 @@ class SignInFormBase extends Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
+  
+
   render() {
+
+
     const { email, password, error } = this.state;
 
     const isInvalid = password === '' || email === '';
 
     return (
       <div className='centerdivitem'>
+        
+  
       <form onSubmit={this.onSubmit}>
-        <input className='inputas'
-          name="email"
-          value={email}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Email Address"
-        />
-        <input className='inputas'
-          name="password"
-          value={password}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Password"
-        />
-        <button className='btnsigin' disabled={isInvalid} type="submit">
+
+      
+
+   <div className='inputintern'>
+      <div class=" input-group  mb-3">
+      <div className='divlogcorp'>
+     <div className='divtextloginput'>SEU NOME </div>
+  <input type="text" 
+  name="email"
+  value={email}
+  onChange={this.onChange}
+  class="form-control"  
+  placeholder="Username" 
+  aria-label="Username" 
+  aria-describedby="basic-addon1"
+  />
+     </div>
+    </div>
+   </div>
+
+   <div className='inputintern'>
+      <div class=" input-group row  mb-3">
+      <div className='divlogcorp'>
+     <div className='divtextloginput'> SUA SENHA </div>
+  <input type="password" 
+  name="password"
+  value={password}
+  onChange={this.onChange}
+  class="form-control"  
+  placeholder="Senha" 
+  aria-label="Username" 
+  aria-describedby="basic-addon1"
+  />
+     </div>
+    </div>
+   </div>
+
+   <div className='divlogcorp'>
+      <button className='btn btnsigin' disabled={isInvalid} type="submit">
           Entrar
-        </button>
+      </button>
+
+      <div className='btn btnseletiva'  >
+         Inscreva-se na Seletiva
+      </div>
+   </div>
+
 
         {error && <p>{error.message}</p>}
       </form>
