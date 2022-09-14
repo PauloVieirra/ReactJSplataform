@@ -1,18 +1,15 @@
 import React from 'react';
 import './style.css';
-import Foot from '../Footer';
+
+
 
 const Landing = () => (
 
      
-
-  <div className='mainlanding'>
+    <div className='main'>
      
-       
-
-
-   
     </div>
+
 );
 
 export default Landing;

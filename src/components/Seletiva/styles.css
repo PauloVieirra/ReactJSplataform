@@ -1,4 +1,30 @@
 
+.divseletiva{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(340deg,#4E426F, #695076,#8D6182);
+    flex-direction: column;
+}
+.divselctop{
+    display: flex;
+    width: 93%;
+    height: 50px;
+    margin-left: 3%;
+    align-items: center;
+}
+.formselect{
+    display: block;
+    flex-direction: column;
+    width: 80%;
+    margin: 10%;
+    margin-top: 18%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .cardsign{
     display: flex;
     width: 100%;
@@ -84,8 +110,8 @@
 .inputintern{
     display: flex;
     align-items: center;
-    width: 100%;
-    height: 10vh;
+    width:100%;
+    height: 7vh;
     background-color: rgba(0, 0, 0, 0);
 }
 .divloglogo{
@@ -168,22 +194,6 @@
     justify-content: center;
     background-color: rgba(253, 253, 251, 0.856);
   }
-  .topinit{
-    display: none;
-    flex-direction: row;
-    width: 100%;
-    height: 40px;
-  }
-  .apart{
-    display: flex;
-    width: 70%;
-    flex-direction: row-reverse;
-    padding-right: 100px;
-  }
-  .bpart{
-    width: 30%;
-    max-width: 400px;
-  }
 .form-control{
     display: flex;
     width: 90%;
@@ -257,54 +267,4 @@
         justify-content: center;
         background-color: rgba(224, 193, 16, 0);
       }
-
-      .inputintern{
-        display: flex;
-        align-items: center;
-        width: 100%;
-        height: 40vh;
-        background-color: rgba(0, 0, 0, 0);
-    }
-    .topinit{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        height: 40px;
-      }
-      .divoneinit{
-          display: flex;
-          width: 70%;
-          height: 100%;
-      }
-
-      .form-control{
-        display: flex;
-        width: 90%;
-        height: 100%;
-        margin: 6px;
-        font-size: 14px;
-        border-width: 2px;
-        border-style:outset;
-        border-radius: 8px;
-        background-color: rgba(250, 252, 252, 0.041);
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: 5px;
-        border-color: rgb(26, 25, 25)
-    }
-    .form-control:focus{
-        display: flex;
-        width: 90%;
-        height: 100%;
-        margin: 6px;
-        font-size: 16px;
-        border-width: 1px;
-        border-style:inherit;
-        border-color: rgb(255, 255, 255);
-        background-color: rgba(0, 255, 255, 0);
-        border-top: none;
-        border-left: none;
-        border-right: none;
-    }
 }

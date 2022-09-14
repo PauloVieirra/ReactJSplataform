@@ -11,7 +11,7 @@ import AccountPage from '../Account';
 import AdminPage from '../Admin';
 import VideoPages from '../Medias';
 import ServicesPage from '../Services';
-
+import SeletivaPage from '../Seletiva';
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
 
@@ -23,6 +23,7 @@ const App = () => (
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
       <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
       <Route path={ROUTES.SIGN_IN} component={SignInPage} />
+      <Route path={ROUTES.SELETIVA} component={SeletivaPage} />
       <Route
         path={ROUTES.PASSWORD_FORGET}
         component={PasswordForgetPage}
