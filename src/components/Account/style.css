@@ -4,7 +4,7 @@
     align-items: center;
     margin-top: 20px;
     flex-direction: column;
-    background-color: rgba(18, 21, 39);
+    background-image: linear-gradient(180deg, rgb(31, 39, 80), rgb(15, 14, 26));
 }
 .card{
     display: flex;
@@ -17,7 +17,7 @@
     margin-right: 10px;
     border-radius: 12px;
     flex-direction: row;
-    background-color: rgba(179, 179, 179, 0.144);
+    background-color: rgba(255, 255, 255, 0.822);
 }
 .cardl{
     display: flex;
@@ -28,7 +28,7 @@
     padding: 20px;
     border-radius: 12px;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.801);
+    background-color: rgba(236, 12, 12, 0);
 }
 .cardlsup{
     display: flex;
@@ -69,7 +69,7 @@
     height: 50px;
     justify-content: end;
     align-items: center;
-    background-color: rgb(199, 197, 197);
+    background-color: rgb(224, 224, 224);
     position: absolute;
     top: 0px;
     z-index: 1;
@@ -318,6 +318,7 @@ border-top-right-radius: 12px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background-image: linear-gradient(180deg, rgb(31, 39, 80), rgb(15, 14, 26));
     }
 
     .card{
@@ -385,7 +386,7 @@ border-top-right-radius: 12px;
         height: 100vh;
         margin-top: 20px;
         flex-direction: column;
-        background-color: rgba(18, 21, 39);
+        background-image: linear-gradient(180deg, rgb(31, 39, 80), rgb(15, 14, 26));
     }
     .card{
         display: flex;
@@ -698,7 +699,7 @@ border-top-right-radius: 12px;
         height: 100vh;
         flex-direction: column;
         align-items: center;
-        background-image: linear-gradient(180deg, rgba(18, 21, 39, 0.10), rgba(28, 20, 141, 0.5));
+        background-image: linear-gradient(180deg, rgb(31, 39, 80), rgb(15, 14, 26));
     }
 
     .barratopmob{
@@ -735,7 +736,7 @@ border-top-right-radius: 12px;
         border-radius: 12px;
         flex-direction: column;
         align-items: center;
-        background-color: rgba(255, 255, 255, 0.062);
+        background-color: rgba(124, 124, 124, 0.062);
     }
     .cardl{
         display: flex;
@@ -771,7 +772,7 @@ border-top-right-radius: 12px;
         padding: 2px;
         border-radius: 12px;
         align-items: center;
-        background-color: rgba(231, 23, 23, 0.623);
+        background-color: rgba(231, 23, 23, 0);
     }
     .boximg{
         display: flex;
@@ -831,7 +832,7 @@ border-top-right-radius: 12px;
         height: 100vh;
         flex-direction: column;
         align-items: center;
-        background-image: linear-gradient(180deg, rgba(18, 21, 39, 0.10), rgba(28, 20, 141, 0.5));
+        background-image: linear-gradient(180deg, rgb(31, 39, 80), rgb(15, 14, 26));
     }
 
     .barratopmob{
@@ -840,7 +841,7 @@ border-top-right-radius: 12px;
         height: 50px;
         justify-content: end;
         align-items: center;
-        background-color: rgb(199, 197, 197);
+        background-color: rgba(199, 197, 197, 0.308);
         position: absolute;
         top: 0px;
         z-index: 1;
@@ -855,7 +856,7 @@ border-top-right-radius: 12px;
         display: none;
         width: 100%;
         height: 40px;
-        background-color: rgb(218, 23, 23);
+        background-color: rgba(199, 197, 197, 0.308);
         position: absolute;
         top: 0px;
         z-index: 1;
@@ -878,7 +879,7 @@ border-top-right-radius: 12px;
         padding: 20px;
         border-radius: 12px;
         flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.801);
+        background-color: rgba(255, 255, 255, 0.774)
     }
     .cardlsup{
         display: flex;
