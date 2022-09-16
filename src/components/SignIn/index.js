@@ -7,6 +7,7 @@ import { withFirebase } from '../Firebase';
 import Modal from 'react-bootstrap/Modal';
 import logo from '../../assets/logoplus.png'
 import * as ROUTES from '../../constants/routes';
+import Sobre from '../Cards/Sobre';
 import './style.css';
 
 export default function SignInPage () {
@@ -153,7 +154,7 @@ export default function SignInPage () {
           <Modal.Body>
            <div className='bodymodal'>
                
-                   123456
+                
               
            </div>
           </Modal.Body>
@@ -356,7 +357,7 @@ export default function SignInPage () {
      </div>
 
      <div className='divoneinit'>
-      123
+      <Sobre/>
      </div>
   </div>
 
