@@ -12,6 +12,11 @@ import AdminPage from '../Admin';
 import VideoPages from '../Medias';
 import ServicesPage from '../Services';
 import SeletivaPage from '../Seletiva';
+import EducacaoPage from '../Cards/Educacao';
+import FaculdadePage from '../Cards/Faculdades';
+import FranquiaPage from '../Cards/Franquia';
+import VistoPage from '../Cards/Visto';
+import SobrePage from '../Cards/Sobre';
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
 
@@ -20,10 +25,16 @@ const App = () => (
     <div>
       <Navigation />
 
-      <Route exact path={ROUTES.LANDING} component={LandingPage} />
-      <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
-      <Route path={ROUTES.SIGN_IN} component={SignInPage} />
-      <Route path={ROUTES.SELETIVA} component={SeletivaPage} />
+      <Route exact path={ROUTES.LANDING} component={LandingPage}/>
+      <Route path={ROUTES.SIGN_UP} component={SignUpPage}/>
+      <Route path={ROUTES.SIGN_IN} component={SignInPage}/>
+      <Route path={ROUTES.SELETIVA} component={SeletivaPage}/>
+      <Route path={ROUTES.EDUCACAO} component={EducacaoPage}/>
+      <Route path={ROUTES.FACULDADE} component={FaculdadePage}/>
+      <Route path={ROUTES.FRANQUIA} component={FranquiaPage}/>
+      <Route path={ROUTES.SOBRE} component={SobrePage}/>
+      <Route path={ROUTES.VISTO} component={VistoPage}/>
+      
       <Route
         path={ROUTES.PASSWORD_FORGET}
         component={PasswordForgetPage}

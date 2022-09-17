@@ -3,7 +3,7 @@ import './style.css';
 
 const Boxintcard = () =>(
   <div className="intcard">
-    
+    ssddsdsdsdsd
   </div>
 );
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import'../style.css';
 
-export default function SobrePage() {
+export default function FaculdadePage() {
  return (
-   <div>Sobre</div>
+   <div>Faculdade</div>
   );
 }

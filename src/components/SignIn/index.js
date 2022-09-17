@@ -7,7 +7,8 @@ import { withFirebase } from '../Firebase';
 import Modal from 'react-bootstrap/Modal';
 import logo from '../../assets/logoplus.png'
 import * as ROUTES from '../../constants/routes';
-import Sobre from '../Cards/Sobre';
+
+
 import './style.css';
 
 export default function SignInPage () {
@@ -300,8 +301,25 @@ export default function SignInPage () {
     withFirebase,
   )(SignInTwitterBase);
   
+  function handleabolt(){
+    window.location.replace('../Sobre')
+  };
   
-    
+  function handlevisa(){
+    window.location.replace('../Visto');
+  }
+
+  function handlefacul(){
+    window.location.replace('../Faculdade');
+  }
+
+  function handlefranquia(){
+    window.location.replace('../Franquia');
+  }
+
+  function handleeducation(){
+    window.location.replace('../Educacao');
+  }
 
 
  return (
@@ -309,11 +327,11 @@ export default function SignInPage () {
   <div className='cardsinone'>
      <div className='topinit'>
        <div className='apart'>
-         <div className='btn btnmenu '>Sobre</div>
-         <div className='btn btnmenu '>Visto/Passaporte</div>
-         <div className='btn btnmenu '>Educação</div>
-         <div className='btn btnmenu '>Faculdades</div>
-         <div className='btn btnmenu '>Franquia</div>
+         <div className='btn btnmenu ' onClick={handleabolt}>Sobre</div>
+         <div className='btn btnmenu ' onClick={handlevisa}>Visto/Passaporte</div>
+         <div className='btn btnmenu ' onClick={handleeducation}>Educação</div>
+         <div className='btn btnmenu ' onClick={handlefacul}>Faculdades</div>
+         <div className='btn btnmenu ' onClick={handlefranquia}>Franquia</div>
        </div>
        <div className='bpart'></div>
      </div>

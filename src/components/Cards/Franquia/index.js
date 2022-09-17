@@ -1,7 +1,7 @@
 import React from 'react';
 import '../style.css'
 
-export default function Franquia() {
+export default function FranquiaPage() {
  return (
  
      <div className='divloggeral'>
@@ -23,11 +23,10 @@ export default function Franquia() {
   <div className='cardsign'>
     <div className='divlogsup'>
     <div className='divloglogo'>
-       <img className='divlogimg' src={logo} alt=""/>
     </div>
     </div>
     <div className='divlogsub'>
-        <SignInForm />
+      
     </div>       
     {/*
     <PasswordForgetLink />

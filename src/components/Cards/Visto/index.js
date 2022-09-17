@@ -1,8 +1,8 @@
 import React from 'react';
 import'../style.css';
 
-export default function SobrePage() {
+export default function VistoPage() {
  return (
-   <div>Sobre</div>
+   <div>Visto</div>
   );
 }
