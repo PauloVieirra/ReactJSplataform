@@ -336,7 +336,7 @@ export default function SignInPage () {
        <div className='bpart'></div>
      </div>
      <div className='divoneinit'>
-       <div className='barrintbn' >1</div>
+       <div className='barrintbn' ></div>
        <div className='barrintbn'  >   </div>
        <div className='barrintbn'  > <div className='btnsele'> Inscreva-se para a seletiva.</div> </div>
        <div className='barrintbn4'  >
