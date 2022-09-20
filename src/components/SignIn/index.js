@@ -4,20 +4,21 @@ import { compose } from 'recompose';
 import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget';
 import { withFirebase } from '../Firebase';
-import Modal from 'react-bootstrap/Modal';
+import Foot from '../Footer';
 import logo from '../../assets/logoplus.png'
 import * as ROUTES from '../../constants/routes';
 
 
 import './style.css';
+import { FormText } from 'react-bootstrap';
 
 export default function SignInPage () {
    
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState('');
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+  const [checked, setChecked] = useState(false)
+  const handleClickcheck = () => setChecked(!checked)
+   console.log(checked);
 
 
   const INITIAL_STATE = {
@@ -66,6 +67,9 @@ export default function SignInPage () {
     handleLogin = () => {
       this.props.history.push('/');
     }
+      
+
+
   
    
   
@@ -375,15 +379,20 @@ export default function SignInPage () {
        <img className='divlogimg' src={logo} alt=""/>
     </div>
     </div>
+    
     <div className='divlogsub'>
         <SignInForm />
-    </div>       
+    </div> 
+    
     {/*
     <PasswordForgetLink />
     <SignUpLink />*/}
    
   </div>
-
+  <div className='barrafootboot'>
+       <Foot/>
+  </div>
+  
   </div>
 
 );

@@ -10,6 +10,7 @@ export const FACULDADE = '/faculdade';
 export const EDUCACAO ='/educacao';
 export const VISTO = '/visto';
 export const SOBRE = '/sobre';
+export const TERMO = '/termo';
 export const FRANQUIA = '/franquia';
 export const PASSWORD_FORGET = '/pw-forget';
 export const ADMIN = '/admin';

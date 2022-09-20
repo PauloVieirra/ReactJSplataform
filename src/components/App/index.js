@@ -13,6 +13,7 @@ import VideoPages from '../Medias';
 import ServicesPage from '../Services';
 import SeletivaPage from '../Seletiva';
 import EducacaoPage from '../Cards/Educacao';
+import Termo from '../Termo';
 import FaculdadePage from '../Cards/Faculdades';
 import FranquiaPage from '../Cards/Franquia';
 import VistoPage from '../Cards/Visto';
@@ -34,6 +35,8 @@ const App = () => (
       <Route path={ROUTES.FRANQUIA} component={FranquiaPage}/>
       <Route path={ROUTES.SOBRE} component={SobrePage}/>
       <Route path={ROUTES.VISTO} component={VistoPage}/>
+      <Route path={ROUTES.TERMO} component={Termo}/>
+
       
       <Route
         path={ROUTES.PASSWORD_FORGET}

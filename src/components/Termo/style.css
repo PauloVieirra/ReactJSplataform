@@ -1,0 +1,58 @@
+.divtermos{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(207, 207, 207, 0.349);
+}
+.divtermostop{
+    display: flex;
+    width: 100%;
+    height: 45px;
+    align-items: center;
+    font-size: 20px;
+    padding-left: 50px;
+    background-color: rgb(255, 255, 255);
+}
+.divtermosbot{
+    display: flex;
+    width: 100%;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    padding-left: 50px;
+}
+.divtermosbody{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+    margin-top: 20px;
+    
+    margin-bottom: 20px;
+    padding: 18px;
+    background-color: rgb(255, 255, 255);
+}
+
+.divtermostitlle{
+  font-size: 20;
+  font-weight: bold;
+}
+
+.divtermostext{
+   font-size: 14;
+   font-weight: lighter; 
+}
+.btntermosback{
+    display: flex;
+    color: aliceblue;
+    width: 32%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: rgb(97, 201, 28);
+}
