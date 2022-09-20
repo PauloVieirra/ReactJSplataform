@@ -104,7 +104,7 @@ REACT_APP_CONFIRMATION_EMAIL_REDIRECT=http://localhost:3000
 **Production:**
 
 ```
-REACT_APP_CONFIRMATION_EMAIL_REDIRECT=https://mydomain.com
+REACT_APP_CONFIRMATION_EMAIL_REDIRECT=http://www.adminstone.plus1cademy.com
 ```
 
 ### Security Rules

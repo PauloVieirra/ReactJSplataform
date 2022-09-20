@@ -6,7 +6,7 @@ export default function Landing() {
     const [load, setLoad] = useState('load');
 
     window.setTimeout(function() {
-        window.location.href = './Signin';
+        window.location.href = '/signin';
     }, 5000);
 
     const path = document.getElementById('c')
