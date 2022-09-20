@@ -6,6 +6,7 @@ import * as ROUTES from '../../constants/routes';
 import * as ROLES from '../../constants/roles';
 import './style.css';
 import logo from '../../assets/logoplus.png';
+import Foot from '../Footer';
 
 const Navigation = () => (
   <AuthUserContext.Consumer>
@@ -35,17 +36,7 @@ const NavigationAuth = ({ authUser }) => (
                       </span>
       </div>
           <ul>
-             
-              <li>
-              <Link to={ROUTES.LANDING}>
-                      <i class="fa fa-home fa-2x"></i>
-                      <span class="nav-text">
-                          Novidades
-                      </span>
-                </Link>
-                
-              </li>
-            
+          
               <li class="has-subnav">
               <Link to={ROUTES.ACCOUNT}>
                       <i class="fa fa-user fa-2x"></i>
@@ -55,12 +46,12 @@ const NavigationAuth = ({ authUser }) => (
                  </Link>
               </li>
               <li  class="has-subnav">
-                <Link to={ROUTES.MEDIA}>
+              
                    <i class="fa fa-play fa-2x"></i>
                       <span class="nav-text">
                          Meus vídeos
                       </span>
-                  </Link>
+             
               </li>
               <li  class="has-subnav">
                 <Link to={ROUTES.SERVICE}>
@@ -82,7 +73,7 @@ const NavigationAuth = ({ authUser }) => (
               </li>
                 )}
              
-              
+             
           </ul>
           </div>
 

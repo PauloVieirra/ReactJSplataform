@@ -35,7 +35,6 @@ export default function SobrePage() {
        <div className='aparttopd'>
          <div className='btn btnmenu ' onClick={handleabolt}>Sobre</div>
          <div className='btn btnmenu ' onClick={handlevisa}>Visto/Passaporte</div>
-         <div className='btn btnmenu ' onClick={handleeducation}>Educação</div>
          <div className='btn btnmenu ' onClick={handlefacul}>Faculdades</div>
          <div className='btn btnmenu ' onClick={handlefranquia}>Franquia</div>
        </div>

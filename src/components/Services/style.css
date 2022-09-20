@@ -8,71 +8,82 @@
 }
 
 .cardservices{
-    display: flex;
-    width: 90%;
-    height: 90%;
-    margin-top: 50px;
-    border-radius: 12px;
-    flex-direction: column;
-    background-color: rgba(179, 179, 179, 0.144);
+display: flex;
+width: 90%;
+height: 90%;
+margin-top: 50px;
+border-radius: 12px;
+flex-direction: column;
+background-color: rgba(179, 179, 179, 0.144);
 }
 .carditem{
-    display: flex;
-    width: 98%;
-    height: 220px;
-    margin: 6px;
-    flex-direction: column;
-    border-radius: 12px;
-    background-image: url('../../assets/young-student.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: 80px;
-    background-color: rgb(20, 168, 194);
+display: flex;
+width: 98%;
+height: 220px;
+margin: 6px;
+flex-direction: row;
+border-radius: 12px;
+background-size: cover;
+background-repeat: no-repeat;
+background-position-x: 80px;
+background-position-y: -100px;
+background-color: rgb(20, 168, 194);
 }
 .carditemb{
-    display: block;
+    display: flex;
     width: 98%;
     height: 220px;
     margin: 6px;
     flex-direction: row;
     border-radius: 12px;
-    background-image: url('../../assets/fresh.png');
-    background-size: 40vh;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position-x: 200px;
-    background-position-Y: 30px;
-    background-color: rgb(177, 170, 72);
+    background-position-x: 80px;
+    background-position-y: -100px;
+background-color: rgb(177, 170, 72);
 }
 .aulasingles{
-    display: flex;
-    width: 50%;
-    height: 100%;
-    background-color: rgba(43, 46, 46, 0);
-    flex-direction: column;
-    margin: 8px;
-    align-items: center;
-    justify-content: center;
-    color: rgb(11, 97, 44);
-    font-size: 25px;
-    font-weight: 700;
+display: flex;
+width: 50%;
+height: 100%;
+background-color: rgba(43, 46, 46, 0);
+flex-direction: column;
+margin: 8px;
+align-items: center;
+justify-content: center;
+color: rgb(11, 97, 44);
+font-size: 25px;
+font-weight: 700;
 
 }
 .btnaulas{
+display: flex;
+width: 90%;
+height: 40px;
+margin: 8px;
+border-radius: 25px;
+justify-content: center;
+align-items: center;
+background-color: rgba(236, 184, 12, 0);
+max-width: 180px;
+border: 2px;
+border-color: black;
+border-style: inset;
+color: rgba(34, 34, 32, 0.651);
+font-size: 20px;
+font-weight:500;
+}
+.seconitem{
     display: flex;
-    width: 90%;
-    height: 40px;
-    margin: 8px;
-    border-radius: 25px;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(236, 184, 12, 0);
-    max-width: 180px;
-    border: 2px;
-    border-color: black;
-    border-style: inset;
-    color: rgba(34, 34, 32, 0.651);
-    font-size: 20px;
-    font-weight:500;
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+}
+.seconitemb{
+    display: flex;
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
 }
 
 @media (min-width:1024px)  { 
@@ -101,7 +112,6 @@
     margin: 6px;
     flex-direction: row;
     border-radius: 12px;
-    background-image: url('../../assets/young-student.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: 80px;
@@ -109,17 +119,13 @@
     background-color: rgb(20, 168, 194);
 }
 .carditemb{
-    display: block;
+    display: flex;
+
     width: 98%;
     height: 220px;
     margin: 6px;
-    flex-direction: row;
     border-radius: 12px;
-    background-image: url('../../assets/fresh.png');
     background-size: 70vh;
-    background-repeat: no-repeat;
-    background-position-x: 380px;
-    background-position-Y: 30px;
     background-color: rgb(177, 170, 72);
 }
 .aulasingles{
@@ -153,15 +159,13 @@
     font-size: 20px;
     font-weight:500;
 }
+
+.seconitem{
+    display: flex;
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
 }
 
-@media (min-width:1200px)  { 
-    .servicespage{
-        display: flex;
-        height: 100vh;
-        flex-direction: column;
-        background-color: rgb(105, 197, 35);
-        align-items: center;
-        justify-content: center;
-    }
 }
+

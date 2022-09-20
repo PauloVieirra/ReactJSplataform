@@ -187,7 +187,8 @@
   .apart{
     display: flex;
     width: 70%;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    justify-content: end;
     padding-right: 20%;
   }
   .bpart{
@@ -354,6 +355,7 @@
     .squar{
         display: flex;
         width: 30px;
+        transform: rotate(90deg);
     }
     
 

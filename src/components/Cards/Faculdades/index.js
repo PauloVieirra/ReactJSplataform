@@ -35,7 +35,6 @@ export default function FranquiaPage() {
        <div className='aparttopd'>
          <div className='btn btnmenu ' onClick={handleabolt}>Sobre</div>
          <div className='btn btnmenu ' onClick={handlevisa}>Visto/Passaporte</div>
-         <div className='btn btnmenu ' onClick={handleeducation}>Educação</div>
          <div className='btn btnmenu ' onClick={handlefacul}>Faculdades</div>
          <div className='btn btnmenu ' onClick={handlefranquia}>Franquia</div>
        </div>
@@ -47,10 +46,11 @@ export default function FranquiaPage() {
       <div className='carfranquia'>
 
       <div className='cardtexttitle'>
-        A Franquia Plus 1 Academy
+        Faculdades
+     
         </div>
         <div className='cardtextconteudo'>
-        As ligas esportivas universtárias nos Estados Unidos são extremamente competitivas e oferecem aos atletas toda estrutura e recursos necessários para que o atleta possa maximizar seu talento e desempenho. Todos anos, milhares de atletas saem das ligas universitárias para dar sequência a uma carreira esportiva profissional em esportes como Futebol, Basquete, Tênis, Natação, Volei, Golfe e muitos outros. Com mais de 2 mil universidades em todo país oferecendo esporte competitivo, existem muitas oportunidades mesmo para atletas que não almejam ou possuem o nível competitivo suficiente para seguir uma carreira profissional. No Brasil muitos atletas ao concluir o Ensino Médio são confrontados com a decisão entre tentar uma carreira profissional no esporte ou abandonar o esporte para concentrar-se nos estudos. Infelizmente por falta de apoio muitos desses atletas acabam perdendo ambas oportunidades. Uma carreira universitária nos EUA oferece a chance única de seguir os dois caminhos com segurança. PRÉ-REQUISITOS
+           <br/>As ligas esportivas universtárias nos Estados Unidos são extremamente competitivas e oferecem aos atletas toda estrutura e recursos necessários para que o atleta possa maximizar seu talento e desempenho. Todos anos, milhares de atletas saem das ligas universitárias para dar sequência a uma carreira esportiva profissional em esportes como Futebol, Basquete, Tênis, Natação, Volei, Golfe e muitos outros. Com mais de 2 mil universidades em todo país oferecendo esporte competitivo, existem muitas oportunidades mesmo para atletas que não almejam ou possuem o nível competitivo suficiente para seguir uma carreira profissional. No Brasil muitos atletas ao concluir o Ensino Médio são confrontados com a decisão entre tentar uma carreira profissional no esporte ou abandonar o esporte para concentrar-se nos estudos. Infelizmente por falta de apoio muitos desses atletas acabam perdendo ambas oportunidades. Uma carreira universitária nos EUA oferece a chance única de seguir os dois caminhos com segurança. PRÉ-REQUISITOS
 Ensino médio completo
 <br/>
 <br/>

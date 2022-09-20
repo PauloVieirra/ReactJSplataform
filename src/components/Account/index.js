@@ -125,7 +125,7 @@ const AccountPage = () => (
             <div className='cardrsup'>
               <div className='cardintosup'>
                      <div className='textingl'>
-                              O idioma idioma é muito importante para que você tenha uma boa experiencia no exterior.
+                              O idioma é muito importante para que você tenha uma boa experiencia no exterior.
                               atualmente seu nivel de inglês é:
                      </div>
                      <div className='intinfo'>

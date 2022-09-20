@@ -333,7 +333,6 @@ export default function SignInPage () {
        <div className='apart'>
          <div className='btn btnmenu ' onClick={handleabolt}>Sobre</div>
          <div className='btn btnmenu ' onClick={handlevisa}>Visto/Passaporte</div>
-         <div className='btn btnmenu ' onClick={handleeducation}>Educação</div>
          <div className='btn btnmenu ' onClick={handlefacul}>Faculdades</div>
          <div className='btn btnmenu ' onClick={handlefranquia}>Franquia</div>
        </div>
