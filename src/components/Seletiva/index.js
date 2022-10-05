@@ -9,15 +9,23 @@ import logo from '../../assets/logoplus.png'
 import * as ROUTES from '../../constants/routes';
 import './styles.css';
 import backarrow from '../../assets/arrow-left.svg';
+import Iconfranquia from '../../assets/left-arrow.png';
 
 export default function SeletivaPage() {
  return (
   <div className='divseletiva'>
     <div className='divselctop'>
-    <Link to={"./Signin"}>
-      <img src={backarrow} alt=""/>
-    </Link>
+      <Link to={'/'}><img className='divicon' src={Iconfranquia} alt=""/> </Link>
     </div>
+
+ <div className='toplogoselect'>
+        <img src={logo} className="imglogoselect" alt=""/>
+ </div>
+ <div className='toplogoselect'>
+      Você esta se inscrevendo para a seletiva.
+ </div>
+
+
 
     <div className='formselect'>
 
@@ -65,8 +73,6 @@ export default function SeletivaPage() {
     <div className='divtextloginput'> EMAIL </div>
  <input type="text" 
  name="password"
- 
-
  class="form-control"  
  placeholder="" 
  aria-label="Username" 

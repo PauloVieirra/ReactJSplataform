@@ -68,12 +68,6 @@ export default function SignInPage () {
       this.props.history.push('/');
     }
       
-
-
-  
-   
-  
-    
   
     render() {
       
@@ -129,7 +123,6 @@ export default function SignInPage () {
         <button className='btn btnsigin' disabled={isInvalid} type="submit">
             Entrar
         </button>
-  
         <div className='btn btnseletiva' >
         <Link to={"./Seletiva"}>
            Inscreva-se na Seletiva</Link>
@@ -147,163 +140,12 @@ export default function SignInPage () {
     }
   }
   
-  class SignInGoogleBase extends Component {
-    constructor(props) {
-      super(props);
-  
-      this.state = { error: null };
-    }
-  
-    onSubmit = event => {
-      this.props.firebase
-        .doSignInWithGoogle()
-        .then(socialAuthUser => {
-          // Create a user in your Firebase Realtime Database too
-          return this.props.firebase.user(socialAuthUser.user.uid).set({
-            username: socialAuthUser.user.displayName,
-            email: socialAuthUser.user.email,
-            roles: {},
-          });
-        })
-        .then(() => {
-          this.setState({ error: null });
-          this.props.history.push(ROUTES.ACCOUNT);
-        })
-        .catch(error => {
-          if (error.code === ERROR_CODE_ACCOUNT_EXISTS) {
-            error.message = ERROR_MSG_ACCOUNT_EXISTS;
-          }
-  
-          this.setState({ error });
-        });
-  
-      event.preventDefault();
-    };
-  
-    render() {
-      const { error } = this.state;
-  
-      return (
-        <form onSubmit={this.onSubmit}>
-          <button type="submit">Sign In with Google</button>
-  
-          {error && <p>{error.message}</p>}
-        </form>
-      );
-    }
-  }
-  
-  class SignInFacebookBase extends Component {
-    constructor(props) {
-      super(props);
-  
-      this.state = { error: null };
-    }
-  
-    onSubmit = event => {
-      this.props.firebase
-        .doSignInWithFacebook()
-        .then(socialAuthUser => {
-          // Create a user in your Firebase Realtime Database too
-          return this.props.firebase.user(socialAuthUser.user.uid).set({
-            username: socialAuthUser.additionalUserInfo.profile.name,
-            email: socialAuthUser.additionalUserInfo.profile.email,
-            roles: {},
-          });
-        })
-        .then(() => {
-          this.setState({ error: null });
-          this.props.history.push(ROUTES.ACCOUNT);
-        })
-        .catch(error => {
-          if (error.code === ERROR_CODE_ACCOUNT_EXISTS) {
-            error.message = ERROR_MSG_ACCOUNT_EXISTS;
-          }
-  
-          this.setState({ error });
-        });
-  
-      event.preventDefault();
-    };
-  
-    render() {
-      const { error } = this.state;
-  
-      return (
-        <form onSubmit={this.onSubmit}>
-          <button type="submit">Sign In with Facebook</button>
-  
-          {error && <p>{error.message}</p>}
-        </form>
-      );
-    }
-  }
-  
-  class SignInTwitterBase extends Component {
-    constructor(props) {
-      super(props);
-  
-      this.state = { error: null };
-    }
-  
-    onSubmit = event => {
-      this.props.firebase
-        .doSignInWithTwitter()
-        .then(socialAuthUser => {
-          // Create a user in your Firebase Realtime Database too
-          return this.props.firebase.user(socialAuthUser.user.uid).set({
-            username: socialAuthUser.additionalUserInfo.profile.name,
-            email: socialAuthUser.additionalUserInfo.profile.email,
-            roles: {},
-          });
-        })
-        .then(() => {
-          this.setState({ error: null });
-          this.props.history.push(ROUTES.ACCOUNT);
-        })
-        .catch(error => {
-          if (error.code === ERROR_CODE_ACCOUNT_EXISTS) {
-            error.message = ERROR_MSG_ACCOUNT_EXISTS;
-          }
-  
-          this.setState({ error });
-        });
-  
-      event.preventDefault();
-    };
-  
-    render() {
-      const { error } = this.state;
-  
-      return (
-        <form onSubmit={this.onSubmit}>
-          <button type="submit">Sign In with Twitter</button>
-  
-          {error && <p>{error.message}</p>}
-        </form>
-      );
-    }
-  }
-  
+
   const SignInForm = compose(
     withRouter,
     withFirebase,
   )(SignInFormBase);
   
-  const SignInGoogle = compose(
-    withRouter,
-    withFirebase,
-  )(SignInGoogleBase);
-  
-  const SignInFacebook = compose(
-    withRouter,
-    withFirebase,
-  )(SignInFacebookBase);
-  
-  const SignInTwitter = compose(
-    withRouter,
-    withFirebase,
-  )(SignInTwitterBase);
   
   function handleabolt(){
     window.location.replace('../Sobre')
@@ -321,8 +163,8 @@ export default function SignInPage () {
     window.location.replace('../Franquia');
   }
 
-  function handleeducation(){
-    window.location.replace('../Educacao');
+  function handleselect(){
+    window.location.replace('../Seletiva');
   }
 
 
@@ -331,6 +173,7 @@ export default function SignInPage () {
   <div className='cardsinone'>
      <div className='topinit'>
        <div className='apart'>
+      
          <div className='btn btnmenu ' onClick={handleabolt}>Sobre</div>
          <div className='btn btnmenu ' onClick={handlevisa}>Visto/Passaporte</div>
          <div className='btn btnmenu ' onClick={handlefacul}>Faculdades</div>
@@ -341,7 +184,7 @@ export default function SignInPage () {
      <div className='divoneinit'>
        <div className='barrintbn' ></div>
        <div className='barrintbn'  >   </div>
-       <div className='barrintbn'  > <div className='btnsele'> Inscreva-se para a seletiva.</div> </div>
+       <div className='barrintbn' onClick={handleselect}  > <div className='btnsele'> Inscreva-se para a seletiva.</div> </div>
        <div className='barrintbn4'  >
          <div> Participe da nossa seletiva, teste suas habilidades e garanta uma vaga na academia.</div>
          <div class="redes">

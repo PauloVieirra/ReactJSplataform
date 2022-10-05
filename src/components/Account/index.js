@@ -1,5 +1,6 @@
 import React, { Component, useState } from 'react';
 import { compose } from 'recompose';
+import { Link, withRouter } from 'react-router-dom';
 import iconcalendar from '../../assets/calendar.svg';
 import iconestatura from '../../assets/metrr.svg';
 import iconposition from '../../assets/position.svg';
@@ -46,6 +47,9 @@ function Controler(){
       setMode(!active)
   }
 };
+
+
+
 
 
 
@@ -138,13 +142,15 @@ const AccountPage = () => (
                      </div>
               </div>
               <div className='cardintosub'>
-                      <h2>Idioma</h2>
+              <Link to={"./Services"}>
+              <h2>Idioma</h2></Link>
+                 
               </div>
             </div>
               <div className='cardrsup'>
               <div className='cardintosup'>
               <div className='textingl'>
-                             Lembrete - o bom desempenho escolar e obrigatório para a continuidade no programa.
+                             Lembrete - o bom desempenho escolar é obrigatório para a continuidade no programa.
                      </div>
                      <div className='intinfo'>
                        <div className='divlvwidioma'>
@@ -156,8 +162,9 @@ const AccountPage = () => (
                      </div>
                      </div>
                   </div>
-                  <div className='cardintosub'>
-                      <h2>Estudos</h2>
+                  <div className='cardintosub' >
+                  <Link to={"./Services"}>
+                    <h2>Estudos</h2></Link>
                   </div>
               </div>
             </div>

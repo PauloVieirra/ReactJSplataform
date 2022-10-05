@@ -27,46 +27,46 @@ alert("Disponivel em breve!");
 
 const NavigationAuth = ({ authUser }) => (
  
-  <div class="area">
-  <nav class="main-menu">
+  <div className="area">
+  <nav className="main-menu">
     <div className='menuinterno'>
       <div className='menuamburguer'>
-                      <i class="fa fa-bars fa-2x"></i>
-                      <span class="nav-text">
+                      <i className="fa fa-bars fa-2x"></i>
+                      <span className="nav-text">
                       </span>
       </div>
           <ul>
           
-              <li class="has-subnav">
+              <li className="has-subnav">
               <Link to={ROUTES.ACCOUNT}>
-                      <i class="fa fa-user fa-2x"></i>
-                      <span class="nav-text">
+                      <i className="fa fa-user fa-2x"></i>
+                      <span className="nav-text">
                           Meu perfil
                       </span>
                  </Link>
               </li>
-              <li  class="has-subnav">
+              <li  className="has-subnav">
               
-                   <i class="fa fa-play fa-2x"></i>
-                      <span class="nav-text">
+                   <i className="fa fa-play fa-2x"></i>
+                      <span className="nav-text">
                          Meus vídeos
                       </span>
              
               </li>
-              <li  class="has-subnav">
+              <li  className="has-subnav">
                 <Link to={ROUTES.SERVICE}>
-                   <i class="fa fa-book fa-2x"></i>
-                      <span class="nav-text">
+                   <i className="fa fa-book fa-2x"></i>
+                      <span className="nav-text">
                          Serviços
                       </span>
                   </Link>
               </li>
             
               {!!authUser.roles[ROLES.ADMIN] && (
-              <li class="has-subnav">
+              <li className="has-subnav">
               <Link to={ROUTES.ADMIN}>
-                     <i class="fa fa-list fa-2x"></i>
-                      <span class="nav-text">
+                     <i className="fa fa-list fa-2x"></i>
+                      <span className="nav-text">
                           Admin
                       </span>
                   </Link>
@@ -77,11 +77,11 @@ const NavigationAuth = ({ authUser }) => (
           </ul>
           </div>
 
-          <ul class="logout">
+          <ul className="logout">
               <li>
                
                        
-                      <span class="nav-text">
+                      <span className="nav-text">
                       <SignOutButton />
                       </span>
                

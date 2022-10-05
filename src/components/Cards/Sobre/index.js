@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Iconfranquia from '../../../assets/left-arrow.png';
 import './styles.css'
+import Foot from '../../Footer';
+import logocard from '../../../assets/logoplus.png';
 
 export default function SobrePage() {
   function handleabolt(){
@@ -30,7 +32,9 @@ export default function SobrePage() {
      <div className='topinit'>
      <div className='topinit'>
       <div className='divtophomeback'>
-      <Link to={'./signin'}><img className='divicon' src={Iconfranquia} alt=""/> </Link>
+        <Link to={'/'}>
+          <img className='divicon' src={Iconfranquia} alt=""/>
+        </Link>
       </div>
        <div className='aparttopd'>
          <div className='btn btnmenu ' onClick={handleabolt}>Sobre</div>
@@ -44,6 +48,13 @@ export default function SobrePage() {
        
     <div className='divcardextern'>
       <div className='carfranquia'>
+         <div className='logocard'>
+          <img src={logocard} className="logocardimg" alt=""/>
+         </div>
+
+
+
+
 
       <div className='cardtexttitle'>
         Plus 1 Academy
@@ -112,11 +123,18 @@ export default function SobrePage() {
 
       </div>
 
+     
+
     </div>
    
   </div>
+
+
+  
        
   </div>
+    
+    
   
   );
 }

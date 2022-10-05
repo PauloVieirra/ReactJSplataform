@@ -30,7 +30,7 @@ export default function FranquiaPage() {
      <div className='topinit'>
      <div className='topinit'>
       <div className='divtophomeback'>
-      <Link to={'./signin'}><img className='divicon' src={Iconfranquia} alt=""/> </Link>
+      <Link to={'/'}><img className='divicon' src={Iconfranquia} alt=""/> </Link>
       </div>
        <div className='aparttopd'>
          <div className='btn btnmenu ' onClick={handleabolt}>Sobre</div>

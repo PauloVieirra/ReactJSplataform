@@ -135,16 +135,16 @@
 }
 .btnsigin:hover{
     display: flex;
-    width: 92%;
-    height: 45px;
-    font-size: 15px;
-    margin-left: 6px;
-    margin-top: 25px;
-    border-radius: 8px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    background-color: rgb(224, 193, 16);
+  width: 92%;
+  height: 45px;
+  margin-left: 6px;
+  margin-top: 25px;
+  font-size: 14px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: rgba(224, 193, 16, 0.788);
   }
 .btnseletiva{
     display: flex;

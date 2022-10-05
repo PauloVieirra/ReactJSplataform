@@ -1,6 +1,6 @@
 {
   "name": "react-firebase-authentication",
-  "homepage": "http://plus1cademy.com/",
+  "homepage": "./",
   "version": "0.2.0",
   "private": true,
   "dependencies": {
@@ -8,17 +8,15 @@
     "react": "^16.6.3",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^16.6.3",
-    "react-router-dom": "^4.3.1",
+    "react-router-dom": "^5.3.4",
     "react-scripts": "2.1.1",
     "recompose": "^0.30.0"
-   
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --passWithNoTests",
     "eject": "react-scripts eject"
-   
   },
   "browserslist": [
     ">0.2%",
@@ -26,8 +24,4 @@
     "not ie <= 11",
     "not op_mini all"
   ]
-
-  
 }
-
-

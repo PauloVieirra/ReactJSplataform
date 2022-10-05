@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import { SIGN_IN } from '../../constants/routes';
 import'./style.css';
 
 export default function Landing() {
@@ -6,7 +7,7 @@ export default function Landing() {
     const [load, setLoad] = useState('load');
 
     window.setTimeout(function() {
-        window.location.href = '/signin';
+        window.location.href = SIGN_IN;
     }, 5000);
 
     const path = document.getElementById('c')

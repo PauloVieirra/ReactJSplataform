@@ -27,6 +27,7 @@ export default function EducacaoPage() {
   <div className='cardsinone'>
      <div className='topinit'>
      <div className='topinit'>
+      
        <div className='apart'>
          <div className='btn btnmenu ' onClick={handleabolt}>Sobre</div>
          <div className='btn btnmenu ' onClick={handlevisa}>Visto/Passaporte</div>

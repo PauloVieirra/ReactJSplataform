@@ -25,10 +25,11 @@ const App = () => (
   <Router>
     <div>
       <Navigation />
+       
 
-      <Route exact path={ROUTES.LANDING} component={Landing}/>
+      <Route exact path={ROUTES.SIGN_IN} component={SignInPage}/>
+     
       <Route path={ROUTES.SIGN_UP} component={SignUpPage}/>
-      <Route path={ROUTES.SIGN_IN} component={SignInPage}/>
       <Route path={ROUTES.SELETIVA} component={SeletivaPage}/>
       <Route path={ROUTES.EDUCACAO} component={EducacaoPage}/>
       <Route path={ROUTES.FACULDADE} component={FaculdadePage}/>
@@ -42,6 +43,7 @@ const App = () => (
         path={ROUTES.PASSWORD_FORGET}
         component={PasswordForgetPage}
       />
+       <Route  path={ROUTES.LANDING} component={Landing}/>
       <Route path={ROUTES.ACCOUNT} component={AccountPage} />
       <Route path={ROUTES.HOME} component={HomePage} />
       <Route path={ROUTES.MEDIA} component={VideoPages} />
